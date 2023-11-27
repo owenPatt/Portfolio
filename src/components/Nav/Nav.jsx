@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo-white.png";
 import Switch from "../Switch/Switch";
 import "./Nav.css";
 
