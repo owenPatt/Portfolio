@@ -1,6 +1,6 @@
-import "./Switch.css";
+import "./DarkModeSwitch.css";
 
-const Switch = () => {
+const DarkModeSwitch = () => {
   return (
     <div className="switch">
       <input
@@ -12,4 +12,4 @@ const Switch = () => {
   );
 };
 
-export default Switch;
+export default DarkModeSwitch;

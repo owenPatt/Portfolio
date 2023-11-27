@@ -1,0 +1,35 @@
+.home__header {
+  margin: 170px 0 0 200px;
+  position: relative;
+}
+
+.home__title {
+  font-size: 60px;
+  width: fit-content;
+}
+
+.home__subtitle {
+  font-size: 40px;
+  width: fit-content;
+}
+
+.home__image {
+  position: absolute;
+  top: -100px;
+  right: 100px;
+  width: 600px;
+}
+
+.home__content {
+  margin: 100px 0 0 200px;
+  max-width: 800px;
+}
+
+.home__about-title {
+  margin: 0 0 5px 0;
+  font-size: 30px;
+}
+
+.home__about-text {
+  font-size: 18px;
+}

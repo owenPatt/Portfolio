@@ -1,5 +1,6 @@
 import logo from "../../assets/logo-white.png";
-import Switch from "../Switch/Switch";
+import DarkModeSwitch from "../DarkModeSwitch/DarkModeSwitch";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
@@ -7,15 +8,47 @@ const Nav = () => {
     <nav className="nav">
       <img src={logo} alt="logo" width={200} />
       <div className="nav__links">
-        <div className="nav__link">Home</div>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "nav__link nav__link_active" : "nav__link"
+          }>
+          Home
+        </NavLink>
         <div className="nav__line"></div>
-        <div className="nav__link">About</div>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? "nav__link nav__link_active" : "nav__link"
+          }>
+          About
+        </NavLink>
         <div className="nav__line"></div>
-        <div className="nav__link">Contact</div>
+        <NavLink
+          to="/resume"
+          className={({ isActive }) =>
+            isActive ? "nav__link nav__link_active" : "nav__link"
+          }>
+          Resume
+        </NavLink>
         <div className="nav__line"></div>
-        <div className="nav__link">Projects</div>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            isActive ? "nav__link nav__link_active" : "nav__link"
+          }>
+          Projects
+        </NavLink>
+        <div className="nav__line"></div>
+        <NavLink
+          to="/degree-path"
+          className={({ isActive }) =>
+            isActive ? "nav__link nav__link_active" : "nav__link"
+          }>
+          Degree Path
+        </NavLink>
       </div>
-      <Switch></Switch>
+      <DarkModeSwitch></DarkModeSwitch>
     </nav>
   );
 };
