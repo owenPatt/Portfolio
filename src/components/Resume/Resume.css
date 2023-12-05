@@ -1,5 +1,22 @@
 .resume {
   padding: 50px 0;
+  position: relative;
+}
+
+.resume__download-button {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.resume__download-button:hover {
+  background-color: #8a0000;
 }
 
 .resume__title {
@@ -12,8 +29,15 @@
   margin: 25px 0 0 0;
 }
 
-.resume__tech-project {
+.resume__tech-project,
+.resume__career-outline,
+.resume__education-outline {
   margin: 0 0 40px 0;
+}
+
+.resume__education-outline {
+  text-align: center;
+  margin: 0 0 15px 0;
 }
 
 .resume__subtitle {
