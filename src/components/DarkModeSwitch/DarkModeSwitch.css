@@ -36,9 +36,10 @@
 }
 
 .switch__checkbox:checked + .switch__slider {
-  background-color: #ccc;
+  background-color: #ffffff;
 }
 
 .switch__checkbox:checked + .switch__slider:before {
   transform: translateX(26px);
+  background-color: #131313;
 }

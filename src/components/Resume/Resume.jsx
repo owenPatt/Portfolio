@@ -7,7 +7,9 @@ const Resume = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const hideSidebar = (e) => {
+    const sidebar = document.querySelector(".sidebar");
     if (
+      !sidebar.contains(e.target) &&
       e.target.className !== "resume__button resume__button_small" &&
       e.target.className !== "sidebar expanded"
     ) {
@@ -25,11 +27,6 @@ const Resume = () => {
   return (
     <div className="resume">
       <div className="resume__header">
-        <button
-          className="resume__button resume__button_download-button"
-          onClick={downloadPDF}>
-          Download
-        </button>
         <h2 className="resume__title">Resume</h2>
       </div>
       <section className="resume__section">
@@ -247,6 +244,13 @@ const Resume = () => {
           </button>
         </div>
       </section>
+      <div className="resume__footer">
+        <button
+          className="resume__button resume__button_download-button"
+          onClick={downloadPDF}>
+          Download
+        </button>
+      </div>
       <ExpandingSideBar isExpanded={isExpanded}></ExpandingSideBar>
     </div>
   );
