@@ -39,14 +39,6 @@ const Nav = () => {
           }>
           Projects
         </NavLink>
-        <div className="nav__line"></div>
-        <NavLink
-          to="/degree-path"
-          className={({ isActive }) =>
-            isActive ? "nav__link nav__link_active" : "nav__link"
-          }>
-          Degree Path
-        </NavLink>
       </div>
       <DarkModeSwitch></DarkModeSwitch>
     </nav>

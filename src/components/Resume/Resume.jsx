@@ -1,15 +1,37 @@
+import { useState } from "react";
 import "./Resume.css";
 import downloadPDF from "../../utils/download/download";
+import ExpandingSideBar from "../ExpandingSideBar/ExpandingSideBar";
 
 const Resume = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const hideSidebar = (e) => {
+    if (
+      e.target.className !== "resume__button resume__button_small" &&
+      e.target.className !== "sidebar expanded"
+    ) {
+      setIsExpanded(false);
+      document.removeEventListener("click", hideSidebar);
+    }
+  };
+
+  const showSidebar = () => {
+    document.addEventListener("click", hideSidebar);
+    setIsExpanded(true);
+  };
+
   const email = "owen.patt.8@gmail.com";
   return (
     <div className="resume">
-      <button className="resume__download-button" onClick={downloadPDF}>
-        Download
-      </button>
-      <h2 className="resume__title">Resume</h2>
-      {/* Add your resume content here */}
+      <div className="resume__header">
+        <button
+          className="resume__button resume__button_download-button"
+          onClick={downloadPDF}>
+          Download
+        </button>
+        <h2 className="resume__title">Resume</h2>
+      </div>
       <section className="resume__section">
         <h3 className="resume__subtitle">Owen Patterson</h3>
         <p className="resume__text">
@@ -214,12 +236,18 @@ const Resume = () => {
           </p>
         </div>
         <div className="resume__education-outline">
-          <p className="resume__text">
+          <p className="resume__text resume__text_no-margin">
             Associates in Computer Information Systems - 2021 to Present | Mott
-            Community College - Flint
+            Community College - Flint, MI
           </p>
+          <button
+            className="resume__button resume__button_small"
+            onClick={showSidebar}>
+            View Classes
+          </button>
         </div>
       </section>
+      <ExpandingSideBar isExpanded={isExpanded}></ExpandingSideBar>
     </div>
   );
 };
