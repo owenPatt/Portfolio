@@ -4,12 +4,19 @@ import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import Projects from "./components/Projects/Projects";
 import Nav from "./components/Nav/Nav";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  const handleSetDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="page">
-      <Nav></Nav>
+    <div className={`page ${darkMode ? "" : "page_light-mode"}`}>
+      <Nav darkMode={darkMode} changeTheme={handleSetDarkMode}></Nav>
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>

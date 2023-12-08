@@ -1,12 +1,15 @@
-import logo from "../../assets/logo-white.png";
+import logoWhite from "../../assets/logo-white.png";
+import logoBlack from "../../assets/logo-black.png";
 import DarkModeSwitch from "../DarkModeSwitch/DarkModeSwitch";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = ({ darkMode, changeTheme }) => {
+  // Component code here
   return (
-    <nav className="nav">
-      <img src={logo} alt="logo" width={200} />
+    <nav className={`nav ${darkMode ? "" : "nav_light-mode"}`}>
+      <img src={darkMode ? logoWhite : logoBlack} alt="logo" width={200} />
       <div className="nav__links">
         <NavLink
           to="/"
@@ -15,7 +18,10 @@ const Nav = () => {
           }>
           Home
         </NavLink>
-        <div className="nav__line"></div>
+        <div
+          className={`nav__line ${
+            darkMode ? "" : "nav__line_light-mode"
+          }`}></div>
         <NavLink
           to="/about"
           className={({ isActive }) =>
@@ -23,7 +29,10 @@ const Nav = () => {
           }>
           About
         </NavLink>
-        <div className="nav__line"></div>
+        <div
+          className={`nav__line ${
+            darkMode ? "" : "nav__line_light-mode"
+          }`}></div>
         <NavLink
           to="/resume"
           className={({ isActive }) =>
@@ -31,7 +40,10 @@ const Nav = () => {
           }>
           Resume
         </NavLink>
-        <div className="nav__line"></div>
+        <div
+          className={`nav__line ${
+            darkMode ? "" : "nav__line_light-mode"
+          }`}></div>
         <NavLink
           to="/projects"
           className={({ isActive }) =>
@@ -40,9 +52,14 @@ const Nav = () => {
           Projects
         </NavLink>
       </div>
-      <DarkModeSwitch></DarkModeSwitch>
+      <DarkModeSwitch onToggle={changeTheme}></DarkModeSwitch>
     </nav>
   );
+};
+
+Nav.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  changeTheme: PropTypes.func.isRequired,
 };
 
 export default Nav;
