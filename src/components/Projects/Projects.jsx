@@ -1,10 +1,12 @@
 import "./Projects.css";
+import projects from "../../utils/constants/projects";
+import Carousel from "../Carousel/Carousel";
 
 const Projects = () => {
   return (
-    <div>
-      <h1>Projects</h1>
-      {/* Add your project content here */}
+    <div className="projects">
+      <h1 className="projects__title">Projects</h1>
+      <Carousel data={projects}></Carousel>
     </div>
   );
 };

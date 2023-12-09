@@ -1,0 +1,12 @@
+.carousel {
+  margin: auto;
+}
+
+.carousel__item {
+  text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white !important;
+}
