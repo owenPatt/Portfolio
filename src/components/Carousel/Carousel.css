@@ -8,5 +8,5 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: white !important;
+  color: rgb(255, 0, 0) !important;
 }
