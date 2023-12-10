@@ -1,8 +1,9 @@
 .projects {
-  padding: 50px 100px;
+  padding: 25px 100px;
 }
 
 .projects__title {
-  margin-bottom: 150px;
+  margin-bottom: 40px;
   text-align: center;
+  font-size: 40px;
 }

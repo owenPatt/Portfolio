@@ -6,7 +6,35 @@
   text-align: center;
 }
 
+.carousel__item-description,
+.carousel__item-takeaway,
+.carousel__item-title,
+.carousel__item-takeaway-title {
+  max-width: calc(100% - 60px);
+}
+
+.carousel__item-title {
+  margin: auto;
+}
+
+.carousel__item-description,
+.carousel__item-takeaway {
+  margin: 5px auto 0;
+}
+
+.carousel__item-takeaway-title {
+  margin: 20px 25px 0;
+  text-align: left;
+  font-size: 20px;
+}
+
+.carousel__item-image {
+  width: calc(100% - 60px);
+  margin: 10px auto 0;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: rgb(255, 0, 0) !important;
+  font-size: 30px !important;
 }

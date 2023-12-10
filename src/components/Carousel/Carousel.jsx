@@ -21,6 +21,13 @@ const Carousel = ({ data }) => {
           <div className="carousel__item" key={item.id}>
             <h1 className="carousel__item-title">{item.name}</h1>
             <p className="carousel__item-description">{item.description}</p>
+            <img
+              className="carousel__item-image"
+              src={item.imageSrc}
+              alt={item.name}
+            />
+            <h2 className="carousel__item-takeaway-title">Takeaway:</h2>
+            <p className="carousel__item-takeaway">{item.takeAway}</p>
           </div>
         ))}
       </Slider>
