@@ -9,8 +9,9 @@
 .carousel__item-description,
 .carousel__item-takeaway,
 .carousel__item-title,
-.carousel__item-takeaway-title {
-  max-width: calc(100% - 60px);
+.carousel__item-takeaway-title,
+.carousel__item-image {
+  max-width: calc(100% - 200px);
 }
 
 .carousel__item-title {
@@ -29,12 +30,16 @@
 }
 
 .carousel__item-image {
-  width: calc(100% - 60px);
   margin: 10px auto 0;
 }
 
 .slick-prev:before,
 .slick-next:before {
   color: rgb(255, 0, 0) !important;
-  font-size: 30px !important;
+  font-size: 50px !important;
+}
+
+.slick-prev:before {
+  position: relative;
+  left: -30px;
 }

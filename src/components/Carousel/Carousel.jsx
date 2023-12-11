@@ -7,10 +7,12 @@ import PropTypes from "prop-types";
 const Carousel = ({ data }) => {
   const settings = {
     infinite: true,
-    speed: 100,
-    slidesToShow: 3,
+    speed: 500,
+    slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
+    centerMode: true,
+    centerPadding: "300px",
     swipeToSlide: true,
   };
 
