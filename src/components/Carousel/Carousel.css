@@ -16,6 +16,9 @@
 
 .carousel__item-title {
   margin: auto;
+  font-size: 32px;
+  color: rgb(255, 0, 0);
+  text-decoration: none; /* Added to remove underline */
 }
 
 .carousel__item-description,

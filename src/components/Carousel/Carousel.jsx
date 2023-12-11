@@ -25,7 +25,9 @@ const Carousel = ({ data }) => {
       <Slider {...settings}>
         {data.map((item) => (
           <div className="carousel__item" key={item.id}>
-            <h1 className="carousel__item-title">{item.name}</h1>
+            <a className="carousel__item-title" href={item.githubLink}>
+              {item.name}
+            </a>
             <p className="carousel__item-description">{item.description}</p>
             <img
               className="carousel__item-image"
