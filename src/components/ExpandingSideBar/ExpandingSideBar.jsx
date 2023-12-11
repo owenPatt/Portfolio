@@ -7,7 +7,9 @@ const ExpandingSideBar = ({ isExpanded }) => {
   const [showClass, setShowClass] = useState(-1);
 
   useEffect(() => {
-    fetch("http://localhost/classes.php")
+    fetch(
+      "https://www.mottwebdev.com/student_files/opatterson/comw282/portfolio/classes.php"
+    )
       .then((response) => response.json())
       .then((data) => {
         setData(data);

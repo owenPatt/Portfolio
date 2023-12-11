@@ -18,7 +18,7 @@ function App() {
     <div className={`page ${darkMode ? "" : "page_light-mode"}`}>
       <Nav darkMode={darkMode} changeTheme={handleSetDarkMode}></Nav>
       <Routes>
-        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/resume" element={<Resume />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
