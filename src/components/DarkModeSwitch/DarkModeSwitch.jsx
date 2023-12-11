@@ -1,3 +1,4 @@
+// Imports
 import "./DarkModeSwitch.css";
 import PropTypes from "prop-types";
 
@@ -14,8 +15,10 @@ const DarkModeSwitch = ({ onToggle }) => {
   );
 };
 
+// Define the prop types for the DarkModeSwitch component
 DarkModeSwitch.propTypes = {
   onToggle: PropTypes.func.isRequired,
 };
 
+// Export the DarkModeSwitch component as the default export
 export default DarkModeSwitch;

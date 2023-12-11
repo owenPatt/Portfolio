@@ -1,29 +1,39 @@
+// Import necessary dependencies
 import { useState } from "react";
 import "./Resume.css";
 import downloadPDF from "../../utils/download/download";
 import ExpandingSideBar from "../ExpandingSideBar/ExpandingSideBar";
 
+// Define the Resume component
 const Resume = () => {
+  // Use React's useState hook to manage the state of the sidebar's expansion
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // Define a function to hide the sidebar when a click event occurs outside of it
   const hideSidebar = (e) => {
     const sidebar = document.querySelector(".sidebar");
+    // Check if the click event's target is outside of the sidebar and not on the expand button
     if (
       !sidebar.contains(e.target) &&
       e.target.className !== "resume__button resume__button_small" &&
       e.target.className !== "sidebar expanded"
     ) {
+      // If so, collapse the sidebar and remove the click event listener
       setIsExpanded(false);
       document.removeEventListener("click", hideSidebar);
     }
   };
 
+  // Define a function to show the sidebar and add a click event listener to the document
   const showSidebar = () => {
     document.addEventListener("click", hideSidebar);
     setIsExpanded(true);
   };
 
+  // Define the email to be used in the mailto link
   const email = "owen.patt.8@gmail.com";
+
+  // Return the JSX to render for the Resume component
   return (
     <div className="resume">
       <div className="resume__header">

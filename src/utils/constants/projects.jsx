@@ -1,3 +1,4 @@
+// Array of projects
 const projects = [
   {
     id: 1,

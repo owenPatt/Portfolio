@@ -1,3 +1,4 @@
+// Import necessary styles
 import "./About.css";
 
 const About = () => {

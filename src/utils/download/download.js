@@ -1,3 +1,6 @@
+/**
+ * Downloads a PDF file with the specified filename.
+ */
 const downloadPDF = () => {
   const filename = "Resume.pdf";
 

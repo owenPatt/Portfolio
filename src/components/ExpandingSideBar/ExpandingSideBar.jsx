@@ -1,27 +1,32 @@
+// Imports
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./ExpandingSideBar.css";
 
 const ExpandingSideBar = ({ isExpanded }) => {
+  // Use React's useState hook to manage the state of the data and showClass
   const [data, setData] = useState([]);
   const [showClass, setShowClass] = useState(-1);
 
+  // Use React's useEffect hook to fetch data when the component mounts
   useEffect(() => {
     fetch(
       "https://www.mottwebdev.com/student_files/opatterson/comw282/portfolio/classes.php"
     )
-      .then((response) => response.json())
+      .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
-        setData(data);
+        setData(data); // Update the state with the fetched data
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error)); // Log any errors
   }, []);
 
+  // Define a function to handle changes to the completed selector
   const onCompletedChange = (event) => {
     const value = event.target.value;
-    setShowClass(value);
+    setShowClass(value); // Update the state with the new value
   };
 
+  // Filter the data based on the value of showClass
   const filteredData =
     showClass == -1 ? data : data.filter((item) => item.completed == showClass);
 
@@ -67,8 +72,10 @@ const ExpandingSideBar = ({ isExpanded }) => {
   );
 };
 
+// Define the prop types for the ExpandingSideBar component
 ExpandingSideBar.propTypes = {
   isExpanded: PropTypes.bool.isRequired,
 };
 
+// Export the ExpandingSideBar component as the default export
 export default ExpandingSideBar;

@@ -1,6 +1,8 @@
-import "./Home.css";
-import selfImage from "../../assets/self-image.png";
+// Import necessary dependencies and assets
+import "./Home.css"; // Import the CSS for this component
+import selfImage from "../../assets/self-image.png"; // Import the image to be used
 
+// Define the Home component
 const Home = () => {
   return (
     <div className="home">

@@ -15,8 +15,11 @@ function App() {
   };
 
   return (
+    // Main container
     <div className={`page ${darkMode ? "" : "page_light-mode"}`}>
+      {/* Navigation */}
       <Nav darkMode={darkMode} changeTheme={handleSetDarkMode}></Nav>
+      {/* Routing */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
