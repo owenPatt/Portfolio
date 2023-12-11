@@ -8,7 +8,7 @@ const About = () => {
           <h2 className="about__title">About Me</h2>
           <h3 className="about__subtitle">Who am I?</h3>
           <p className="about__text about__text_short">
-            I am an inspiring full-stack web developer with a passion for
+            I am an aspiring full-stack web developer with a passion for
             programming. I am currently in school at Mott Community College,
             where I am learning to have a great foundation for programming. I am
             also a student at TripleTen, an online code learning platform.

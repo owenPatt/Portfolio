@@ -36,7 +36,7 @@
 }
 
 .switch__checkbox:checked + .switch__slider {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(255, 255, 255);
 }
 
 .switch__checkbox:checked + .switch__slider:before {
