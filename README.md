@@ -13,3 +13,7 @@ Welcome to my portfolio! This repository showcases my projects and skills as a s
 
 - Email: owen.patt.8@gmail.com
 - Phone number: (810) 228-0122
+
+## Links
+
+- https://www.mottwebdev.com/student_files/opatterson/comw282/portfolio/
