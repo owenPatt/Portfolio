@@ -5,9 +5,10 @@ import Resume from "./components/Resume/Resume";
 import Projects from "./components/Projects/Projects";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
-import { HashRouter as Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  console.log("here");
   const [darkMode, setDarkMode] = useState(true);
 
   const handleSetDarkMode = () => {
