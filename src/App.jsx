@@ -5,7 +5,7 @@ import Resume from "./components/Resume/Resume";
 import Projects from "./components/Projects/Projects";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter as Routes, Route } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
