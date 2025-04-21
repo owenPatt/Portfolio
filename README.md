@@ -16,4 +16,4 @@ Welcome to my portfolio! This repository showcases my projects and skills as a s
 
 ## Links
 
-- https://www.mottwebdev.com/student_files/opatterson/comw282/portfolio/
+- https://owenpatt.github.io/Portfolio
