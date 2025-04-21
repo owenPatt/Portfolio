@@ -1,35 +1,8 @@
-// Import necessary dependencies
-import { useState } from "react";
 import "./Resume.css";
 import downloadPDF from "../../utils/download/download";
-import ExpandingSideBar from "../ExpandingSideBar/ExpandingSideBar";
 
 // Define the Resume component
 const Resume = () => {
-  // Use React's useState hook to manage the state of the sidebar's expansion
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  // Define a function to hide the sidebar when a click event occurs outside of it
-  const hideSidebar = (e) => {
-    const sidebar = document.querySelector(".sidebar");
-    // Check if the click event's target is outside of the sidebar and not on the expand button
-    if (
-      !sidebar.contains(e.target) &&
-      e.target.className !== "resume__button resume__button_small" &&
-      e.target.className !== "sidebar expanded"
-    ) {
-      // If so, collapse the sidebar and remove the click event listener
-      setIsExpanded(false);
-      document.removeEventListener("click", hideSidebar);
-    }
-  };
-
-  // Define a function to show the sidebar and add a click event listener to the document
-  const showSidebar = () => {
-    document.addEventListener("click", hideSidebar);
-    setIsExpanded(true);
-  };
-
   // Define the email to be used in the mailto link
   const email = "owen.patt.8@gmail.com";
 
@@ -55,10 +28,9 @@ const Resume = () => {
       <section className="resume__section">
         <h3 className="resume__subtitle">Summary</h3>
         <p className="resume__text">
-          Full stack web developer with a passion for creating user-friendly
-          applications with experience in web development, project management,
-          and mobile development. Background in Computer Science and IT
-          management.
+          Software Developer with experience in web development, project
+          management, mobile device deployment and management, Epic EMR Software
+          and IT support. Educational background in Computer Science
         </p>
       </section>
       <section className="resume__section">
@@ -66,7 +38,7 @@ const Resume = () => {
         <p className="resume__text">
           HTML/CSS, JavaScript, React, Node.js, Express, MongoDB, SQL, noSQL,
           Git, C#, Python, C++, Visual Studio, Windows, Linux, .NET, cloud
-          providers (AWS)
+          providers (AWS), Epic ASAP, OPTime and Cupid
         </p>
       </section>
       <section className="resume__section">
@@ -180,12 +152,44 @@ const Resume = () => {
             </li>
           </ul>
         </div>
+        <div className="resume__tech-project">
+          <p className="resume__text resume__text_left">
+            Pokemon Guesser -{" "}
+            <a
+              className="resume__link"
+              href="https://github.com/owenPatt/Pokemon-Guesser">
+              Github
+            </a>{" "}
+            | C#, .NET Framework and Large Data Management | 2025
+          </p>
+          <ul className="resume__list">
+            <li className="resume__list-item">
+              Build in Visual Studios using the C# language and .NET framework.
+            </li>
+            <li className="resume__list-item">
+              Worked with a large data source and optimized performance.
+            </li>
+          </ul>
+        </div>
       </section>
       <section className="resume__section">
         <h3 className="resume__subtitle">Experience</h3>
         <div className="resume__career-outline">
           <p className="resume__text resume__text_left">
-            Application Analyst 1 - 2023 to Present | Hurley Medical Center
+            Application Analyst II - 2025 to Present | Hurley Medical Center
+          </p>
+          <ul className="resume__list">
+            <li className="resume__list-item">
+              Lead Epic analyst deploying Rover house wide
+            </li>
+            <li className="resume__list-item">
+              Became OPTime and Cupid Certified
+            </li>
+          </ul>
+        </div>
+        <div className="resume__career-outline">
+          <p className="resume__text resume__text_left">
+            Application Analyst I - 2023 to 2025 | Hurley Medical Center
           </p>
           <ul className="resume__list">
             <li className="resume__list-item">
@@ -202,7 +206,7 @@ const Resume = () => {
         </div>
         <div className="resume__career-outline">
           <p className="resume__text resume__text_left">
-            Technical Support Specialist 1 - 2023 | Hurley Medical Center
+            Technical Support Specialist I - 2023 | Hurley Medical Center
           </p>
           <ul className="resume__list">
             <li className="resume__list-item">
@@ -239,29 +243,23 @@ const Resume = () => {
         <h3 className="resume__subtitle">Education</h3>
         <div className="resume__education-outline">
           <p className="resume__text">
-            TripleTen Coding Bootcamp - 2023 to Present
+            TripleTen Coding Bootcamp - 2023 to 2024
           </p>
         </div>
         <div className="resume__education-outline">
           <p className="resume__text resume__text_no-margin">
-            Associates in Computer Information Systems - 2021 to Present | Mott
+            Associates in Computer Information Systems - 2021 to 2025 | Mott
             Community College - Flint, MI
           </p>
-          <button
-            className="resume__button resume__button_small"
-            onClick={showSidebar}>
-            View Classes
-          </button>
         </div>
       </section>
       <div className="resume__footer">
         <button
           className="resume__button resume__button_download-button"
           onClick={downloadPDF}>
-          Download
+          Download Resume
         </button>
       </div>
-      <ExpandingSideBar isExpanded={isExpanded}></ExpandingSideBar>
     </div>
   );
 };

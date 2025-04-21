@@ -40,6 +40,16 @@ const projects = [
     imageSrc: "./images/Terraria.png",
     githubLink: "https://github.com/owenPatt/Terraria-Tutorial/tree/main",
   },
+  {
+    id: 5,
+    name: "Pokemon Guesser",
+    description:
+      "A .NET Program that removes boredom from your life! It is a Pokemon Guessing game, which was designed after some of the dle games (wordle/pokedle).",
+    takeAway:
+      "I further exploded the possiblities with working on big data entries with the .NET framework with this program. With over 1000 data entries, one for every pokemon, you begin to see the strain large amounts of data can put on an application. With this program, I was challenge with the fact that not only would I need to create a fun game, but I needed it to be quick enough to not cause grief when playing it. I had a lot of fun making this, but even more fun playing it!",
+    imageSrc: "./images/pokemon-guesser.png",
+    githubLink: "https://github.com/owenPatt/Pokemon-Guesser",
+  },
 ];
 
 export default projects;

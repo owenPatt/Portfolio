@@ -1,6 +1,14 @@
 // Import necessary styles
 import "./About.css";
 
+/*I am currently in school at Mott Community College,
+where I am learning to have a great foundation for programming. I am
+also a student at TripleTen, an online code learning platform.
+Through them I have gained an incredible amount of knowledge and
+experience with React.js, Node.js, Express, MongoDB, and more. I am
+currently working at Hurley Medical Center as a level 2 technician
+where I handle any technical issues that get escalated.*/
+
 const About = () => {
   return (
     <div>
@@ -9,14 +17,15 @@ const About = () => {
           <h2 className="about__title">About Me</h2>
           <h3 className="about__subtitle">Who am I?</h3>
           <p className="about__text about__text_short">
-            I am an aspiring full-stack web developer with a passion for
-            programming. I am currently in school at Mott Community College,
-            where I am learning to have a great foundation for programming. I am
-            also a student at TripleTen, an online code learning platform.
-            Through them I have gained an incredible amount of knowledge and
-            experience with React.js, Node.js, Express, MongoDB, and more. I am
-            currently working at Hurley Medical Center as a level 2 technician
-            where I handle any technical issues that get escalated.
+            I am an Epic Analyst with a passion for programming. I am just
+            finishing up my associates degree at Mott Community college. While
+            being in school, I also completed a Software Developer Certificate
+            at TripleTen, a coding bootcamp. Through both Mott and TripleTem, I
+            have gained an incredible amount of knowledge and experience with
+            React.js, Node.js, Express, MongoDB, and more. While juggling school
+            and the bootcamp, I have been working at Hurley Medical Center for 4
+            years now! I currently work as an Epic Analyst. Very recently I help
+            the hospital deploy Rover, Epic's Mobile solution!
           </p>
         </header>
         <section className="about__skills-certifications">
@@ -56,13 +65,34 @@ const About = () => {
                 Certifications
               </h3>
               <p className="about__text about__text_card">
-                Currently, I am working on getting the Triple Ten Full Stack Web
-                Developer Certification. I have, however, completed a few
-                Certification through Mott Community College. Here is a list of
+                During my educational journey at Mott Community College and
+                TripleTen, I have earned quite a few certificates. I have also
+                earned some while working as an Epic Analyst. Here is a list of
                 the certifications I have earned:
               </p>
               <div className="about__lists">
                 <ul className="about__list">
+                  <p className="about__list-title">TripleTen</p>
+                  <li className="about__list-item">
+                    Certificate of Completion: Software Engineering Program
+                  </li>
+                  <p className="about__list-title">Mott Certificates</p>
+                  <li className="about__list-item">
+                    Computer Information Systems A.A.S.
+                  </li>
+                  <li className="about__list-item">
+                    Computer Programming Certificate
+                  </li>
+                  <li className="about__list-item">
+                    Web Developer Certificate
+                  </li>
+                </ul>
+                <ul className="about__list">
+                  <p className="about__list-title">Epic Certificates</p>
+                  <li className="about__list-item">OpTime</li>
+                  <li className="about__list-item">ASAP</li>
+                  <li className="about__list-item">Cupid</li>
+                  <p className="about__list-title">General Certificates</p>
                   <li className="about__list-item">
                     MTA: Software Development Fundamentals
                   </li>
